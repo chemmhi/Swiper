@@ -1,0 +1,39 @@
+<template>
+  <swiper>
+    <template v-slot:slide >
+      <swiper-item  v-for="url in urlList" :url="url" >
+        <img :src="url" alt="">
+      </swiper-item>
+    </template>
+  </swiper>
+</template>
+
+<script>
+  import Swiper from "@/components/swiper/Swiper";
+  import SwiperItem from "@/components/swiper/SwiperItem";
+
+export default {
+
+  name: 'App',
+  components: {
+    SwiperItem,
+    Swiper
+  },
+  data(){
+    return {
+      urlList:[
+        "https://s10.mogucdn.com/mlcdn/c45406/180926_45fkj8ifdj4l824l42dgf9hd0h495_750x390.jpg",
+        "https://s10.mogucdn.com/mlcdn/c45406/180926_31eb9h75jc217k7iej24i2dd0jba3_750x390.jpg",
+        "https://s10.mogucdn.com/mlcdn/c45406/180919_3f62ijgkj656k2lj03dh0di4iflea_750x390.jpg",
+        "https://s10.mogucdn.com/mlcdn/c45406/180917_18l981g6clk33fbl3833ja357aaa0_750x390.jpg",
+      ]
+    }
+  }
+}
+</script>
+
+<style>
+  body{
+    margin: 0;
+  }
+</style>
